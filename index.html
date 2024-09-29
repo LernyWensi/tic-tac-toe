@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="src/script.mjs" type="module" defer></script>
+        <link rel="stylesheet" href="style.css" />
+        <title>Tic Tac Toe</title>
+    </head>
+    <body>
+        <div class="scoreboard">
+            <button class="button" id="play-stop" type="button">Play</button>
+            <div class="score">
+                <p class="result" id="x">X <span class="value">0</span></p>
+                <p class="result" id="o">O <span class="value">0</span></p>
+                <p class="result" id="tie">Tie <span class="value">0</span></p>
+            </div>
+        </div>
+
+        <menu class="grid" id="grid">
+            <li><button disabled class="button" type="button" data-row="0" data-col="0"></button></li>
+            <li><button disabled class="button" type="button" data-row="0" data-col="1"></button></li>
+            <li><button disabled class="button" type="button" data-row="0" data-col="2"></button></li>
+
+            <li><button disabled class="button" type="button" data-row="1" data-col="0"></button></li>
+            <li><button disabled class="button" type="button" data-row="1" data-col="1"></button></li>
+            <li><button disabled class="button" type="button" data-row="1" data-col="2"></button></li>
+
+            <li><button disabled class="button" type="button" data-row="2" data-col="0"></button></li>
+            <li><button disabled class="button" type="button" data-row="2" data-col="1"></button></li>
+            <li><button disabled class="button" type="button" data-row="2" data-col="2"></button></li>
+        </menu>
+
+        <menu class="difficulty" id="difficulty">
+            <li>
+                <input id="easy" type="radio" name="difficulty" value="easy" />
+                <label class="button" for="easy">Easy</label>
+            </li>
+            <li>
+                <input id="medium" type="radio" name="difficulty" value="medium" checked />
+                <label class="button" for="medium">Medium</label>
+            </li>
+            <li>
+                <input id="hard" type="radio" name="difficulty" value="hard" />
+                <label class="button" for="hard">Hard</label>
+            </li>
+            <li>
+                <input id="max" type="radio" name="difficulty" value="max" />
+                <label class="button" for="max">Max</label>
+            </li>
+            <li class="minimax">
+                <input id="minimax" type="checkbox" />
+                <label class="button" for="minimax">Minimax</label>
+            </li>
+        </menu>
+    </body>
+</html>
